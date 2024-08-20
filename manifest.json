@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Chess.com Div Styler",
+    "version": "1.0",
+    "description": "Centers the content of a div on Chess.com.",
+    "permissions": [],
+    "content_scripts": [
+      {
+        "matches": ["https://www.chess.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+  
