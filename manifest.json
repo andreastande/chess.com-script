@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Chess.com Div Styler",
+    "name": "Chess.com Center Chessboard",
     "version": "1.0",
     "description": "Centers the content of a div on Chess.com.",
     "permissions": [],
