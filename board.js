@@ -10,17 +10,13 @@ function loadState() {
     });
 }
 
-// Toggle centering and save the state
+// Toggle centering
 chrome.runtime.onMessage.addListener(function(request, _sender, _sendResponse) {
     if (request.action === "toggleCenter") {
         const boardDiv = document.getElementById('board-layout-main');
         if (boardDiv) {
-            const isCentered = boardDiv.style.justifyContent === 'center';
-            const newCenterState = !isCentered;
-            boardDiv.style.justifyContent = isCentered ? '' : 'center';
-
-            // Save the new state
-            chrome.storage.sync.set({ isCentered: newCenterState });
+            const centerBoard = request.isChecked;
+            boardDiv.style.justifyContent = centerBoard ? 'center' : '';
         }
     }
 });
