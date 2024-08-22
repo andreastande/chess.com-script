@@ -1,17 +1,17 @@
-document.addEventListener('DOMContentLoaded', function() {
-    chrome.storage.sync.get('isCentered', function(data) {
-        const checkbox = document.getElementById('applyStyle');
+document.addEventListener("DOMContentLoaded", function() {
+    chrome.storage.sync.get("isCentered", function(data) {
+        const checkbox = document.getElementById("applyStyle");
         checkbox.checked = data.isCentered || false;
     });
 
-    chrome.storage.sync.get('hideRating', function(data) {
-        const checkbox = document.getElementById('applyHideRating');
+    chrome.storage.sync.get("hideRating", function(data) {
+        const checkbox = document.getElementById("applyHideRating");
         checkbox.checked = data.hideRating || false;
     });
 
 });
 
-document.getElementById('applyStyle').addEventListener('change', function() {
+document.getElementById("applyStyle").addEventListener("change", function() {
     const isChecked = this.checked;
 
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
@@ -21,7 +21,7 @@ document.getElementById('applyStyle').addEventListener('change', function() {
     chrome.storage.sync.set({ isCentered: isChecked });
 });
 
-document.getElementById('applyHideRating').addEventListener('change', function() {
+document.getElementById("applyHideRating").addEventListener("change", function() {
     const isChecked = this.checked;
 
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
