@@ -4,6 +4,9 @@
     "version": "1.0",
     "description": "Centers the content of a div on Chess.com.",
     "permissions": [],
+    "action": {
+      "default_popup": "popup.html"
+    },
     "content_scripts": [
       {
         "matches": ["https://www.chess.com/*"],
