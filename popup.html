@@ -3,8 +3,16 @@
     <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
 <body>
-  <h3>Center Div Content</h3>
-  <button id="applyStyle">Center board</button>
-  <script src="popup.js"></script>
+    <h3>Chess.com appearance</h3>
+    <div style="width: 100%; border-bottom: 1px solid white"></div>
+    </br>
+    <div style="display: flex; gap: 1rem; align-items: center;">
+        <p>Center chessboard</p>
+        <label class="switch">
+            <input id="applyStyle" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <script src="popup.js"></script>
 </body>
 </html>

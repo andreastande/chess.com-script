@@ -1,23 +1,24 @@
 {
-    "manifest_version": 3,
-    "name": "Chess.com Center Chessboard",
-    "version": "1.0",
-    "description": "Centers the content of a div on Chess.com.",
-    "permissions": [],
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "content_scripts": [
-      {
-        "matches": ["https://www.chess.com/*"],
-        "js": ["content.js"]
-      }
-    ],
-    "icons": {
-      "16": "icon16.png",
-      "32": "icon32.png",
-      "48": "icon48.png",
-      "128": "icon128.png"
+  "manifest_version": 3,
+  "name": "Chess.com Center Chessboard",
+  "version": "1.0",
+  "description": "Centers the content of a div on Chess.com.",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.chess.com/*"],
+      "js": ["content.js"]
     }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
   }
-  
+}
