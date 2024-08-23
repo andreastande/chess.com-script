@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Chess.com Center Chessboard",
+  "name": "Chess.com Appearance",
   "version": "1.0",
-  "description": "Centers the content of a div on Chess.com.",
+  "description": "Different option to alter appearance of chess.com website",
   "permissions": [
     "storage",
     "webNavigation",
