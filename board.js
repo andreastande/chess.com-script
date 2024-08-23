@@ -6,6 +6,7 @@ function loadState() {
         if (boardDiv) {
             const isCentered = data.isCentered || false;
             boardDiv.style.justifyContent = isCentered ? "center" : "";
+            boardDiv.style.paddingBottom = centerBoard ? "12rem" : "";
         }
     });
 }

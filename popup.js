@@ -9,6 +9,11 @@ document.addEventListener("DOMContentLoaded", function() {
         checkbox.checked = data.hideRating || false;
     });
 
+    chrome.storage.sync.get("hideChat", function(data) {
+        const checkbox = document.getElementById("applyHideChat");
+        checkbox.checked = data.hideChat || false;
+    });
+
 });
 
 document.getElementById("applyStyle").addEventListener("change", function() {
@@ -29,4 +34,14 @@ document.getElementById("applyHideRating").addEventListener("change", function()
     });
 
     chrome.storage.sync.set({ hideRating: isChecked });
+});
+
+document.getElementById("applyHideChat").addEventListener("change", function() {
+    const isChecked = this.checked;
+
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        chrome.tabs.sendMessage(tabs[0].id, {action: "toggleHideChat", isChecked: isChecked});
+    });
+
+    chrome.storage.sync.set({ hideChat: isChecked });
 });
