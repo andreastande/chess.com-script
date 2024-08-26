@@ -21,7 +21,7 @@
       "js": ["board.js"]
     },
     {
-      "matches": ["https://www.chess.com/game/*", "https://www.chess.com/game/live/*"],
+      "matches": ["https://www.chess.com/game/live/*"],
       "js": ["playerInfo.js"]
     }
   ],
